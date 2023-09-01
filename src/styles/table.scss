@@ -1,0 +1,88 @@
+@import "colors";
+
+.tableClass {
+  width: 100%;
+  min-height: 80vh;
+
+  > h1 {
+    margin-top: 0;
+    width: 100%;
+    font: 500 3rem "Roboto";
+    color: $red;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $dark;
+  }
+
+  main {
+    max-width: 900px;
+    background-color: #eeeeee;
+    margin: auto;
+    height: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+
+    > table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      overflow-x: scroll;
+      tr {
+        background-color: whitesmoke;
+
+        &:last-child {
+          td:first-child {
+            border-radius: 0 0 0 10px;
+          }
+          td:last-child {
+            border-radius: 0 0 10px 0;
+          }
+        }
+      }
+
+      td,
+      th {
+        padding: 1rem;
+      }
+
+      th {
+        background-color: rgba($color: $lightdark, $alpha: 0.5);
+        color: white;
+        &:first-child {
+          border-radius: 10px 0 0 0;
+        }
+        &:last-child {
+          border-radius: 0 10px 0 0;
+        }
+      }
+
+      td {
+        color: lightgrey;
+
+        > img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+        }
+
+        > a {
+          color: $red;
+        }
+        > button {
+          border: none;
+          cursor: pointer;
+          margin: 0.25rem;
+          color: $red;
+        }
+      }
+      
+      > thead {
+        th{
+          background-color: $reddark;
+          color: #eeeeee;
+        }
+      }
+    }
+  }
+}

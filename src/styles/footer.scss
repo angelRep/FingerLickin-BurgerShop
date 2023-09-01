@@ -1,0 +1,82 @@
+@import "colors";
+
+footer {
+  margin-top: 100px;
+  text-align: center;
+  width: 100%;
+  min-height: 300px;
+  background-color: $lightdark;
+  padding: 4rem 0 0 0;
+  // display: grid;
+  // grid-template-columns: 2fr 1fr;
+  color: rgb(237, 235, 235);
+  align-items: center;
+
+  img.logo {
+    margin-top: -150px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: $red;
+    font-family: fantasy;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  p,
+  strong {
+    margin: 0.5rem 0.8rem 0.8rem 0.8rem;
+  }
+
+  .social-media {
+    margin-top: 30px;
+
+    a {
+      padding: 5px;
+      margin: 0.5rem 10px;
+      margin-top: 0.5rem;
+    }
+
+    img {
+      &:hover {
+        transform: scale(1.1);
+        filter: invert(0.13) sepia(1) saturate(18) hue-rotate(316.8deg) brightness(0.62);
+      }
+    }
+  }
+
+  aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+      font-size: 1.1rem;
+    }
+
+    a {
+      margin: 0.5rem;
+      font-size: 2rem;
+      color: white;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+  .subfooter {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: small;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgb(0,0,0));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
